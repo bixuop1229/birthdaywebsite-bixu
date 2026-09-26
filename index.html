@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="creatorSplash">
+    <div class="creator-content">
+      <div class="creator-small">Created by</div>
+      <div class="creator-name">Bixu</div>
+      <div class="creator-team">Monitor &amp; Smarty</div>
+      <div class="creator-line"></div>
+    </div>
+  </div>
+  <div id="hearts"></div>
+  <canvas id="confetti"></canvas>
+
+  <main>
+    <section class="hero" id="hero">
+      <p class="eyebrow">A little surprise just for you ✨</p>
+      <h1>Happy Birthday, <span id="name">Dear Friend</span>! 🎂</h1>
+      <p id="intro">Today is all about celebrating you.</p>
+      <button id="openBtn">Open Your Surprise 💌</button>
+    </section>
+
+    <section class="card hidden" id="surprise">
+      <div class="cake">🎂</div>
+      <h2>Wishing You a Beautiful Birthday!</h2>
+      <p id="message">
+        May your day be filled with laughter, wonderful memories, and lots of happiness.
+        Keep smiling and keep shining! ❤️
+      </p>
+
+      <div class="countdown-wrap">
+        <h3>Birthday Countdown</h3>
+        <div class="countdown">
+          <div><b id="days">00</b><span>Days</span></div>
+          <div><b id="hours">00</b><span>Hours</span></div>
+          <div><b id="minutes">00</b><span>Minutes</span></div>
+          <div><b id="seconds">00</b><span>Seconds</span></div>
+        </div>
+      </div>
+
+      <div class="letter">
+        <h3>💌 A Special Note</h3>
+        <p id="note">
+          You deserve all the good things life has to offer. Have an amazing year ahead!
+        </p>
+      </div>
+
+      <button id="celebrateBtn">Celebrate! 🎉</button>
+    </section>
+  </main>
+
+  <audio id="music" loop preload="auto">
+    <!-- Replace music.mp3 with your own royalty-free audio file if desired. -->
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

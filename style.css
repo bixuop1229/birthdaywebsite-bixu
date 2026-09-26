@@ -1,0 +1,55 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--pink:#ff4f9a;--purple:#8d5cff;--glass:rgba(255,255,255,.14)}
+body{
+  min-height:100vh;font-family:system-ui,-apple-system,Segoe UI,sans-serif;
+  color:#fff;overflow-x:hidden;
+  background:radial-gradient(circle at top,#45206b 0,#170c2b 45%,#080510 100%);
+}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;
+background:radial-gradient(circle at 20% 20%,rgba(255,91,159,.18),transparent 25%),
+radial-gradient(circle at 80% 30%,rgba(129,89,255,.2),transparent 25%)}
+main{position:relative;z-index:2;max-width:900px;margin:auto;padding:28px 18px 60px}
+.hero{text-align:center;min-height:72vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.eyebrow{letter-spacing:2px;text-transform:uppercase;font-size:.78rem;opacity:.8}
+h1{font-size:clamp(2.4rem,8vw,5.8rem);line-height:1.02;margin:18px 0;background:linear-gradient(90deg,#fff,#ffb5d8,#c6b6ff,#fff);background-size:300%;
+-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite}
+.hero p:not(.eyebrow){font-size:1.15rem;opacity:.9;max-width:620px}
+button{border:0;border-radius:999px;padding:14px 25px;margin-top:28px;color:white;font-weight:800;font-size:1rem;cursor:pointer;
+background:linear-gradient(135deg,var(--pink),var(--purple));box-shadow:0 10px 35px rgba(255,79,154,.3);transition:.2s}
+button:hover{transform:translateY(-2px) scale(1.02)}
+.card{padding:35px 24px;border:1px solid rgba(255,255,255,.2);border-radius:30px;background:var(--glass);backdrop-filter:blur(15px);box-shadow:0 25px 70px rgba(0,0,0,.35);text-align:center;animation:pop .7s ease}
+.hidden{display:none}.cake{font-size:5rem;animation:bounce 1.5s infinite}
+h2{font-size:clamp(1.8rem,5vw,3rem);margin:10px 0 16px}
+.card>p{line-height:1.8;max-width:680px;margin:auto;color:#f9eaf3}
+.countdown-wrap{margin:32px auto;max-width:650px}.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+.countdown div{padding:15px 5px;border-radius:18px;background:rgba(0,0,0,.2)}
+.countdown b{display:block;font-size:clamp(1.5rem,6vw,2.5rem)}.countdown span{font-size:.75rem;opacity:.75}
+.letter{margin:30px auto 0;padding:24px;max-width:650px;text-align:left;border-radius:20px;background:rgba(255,255,255,.09)}
+.letter p{line-height:1.8;margin-top:8px}
+#hearts{position:fixed;inset:0;pointer-events:none;z-index:1}
+.heart{position:absolute;bottom:-30px;animation:float linear forwards;opacity:.8}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:10}
+@keyframes float{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+@keyframes shine{to{background-position:300%}}
+@keyframes pop{from{opacity:0;transform:scale(.9) translateY(20px)}to{opacity:1;transform:none}}
+@keyframes bounce{50%{transform:translateY(-12px)}}
+@media(max-width:520px){main{padding:14px 12px 40px}.countdown{gap:6px}.countdown div{padding:12px 2px}.card{padding:28px 16px}}
+
+#creatorSplash{
+  position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 50% 35%,#4b1d70 0,#170b2a 50%,#07040d 100%);
+  animation:splashOut .8s ease 4.2s forwards;
+}
+.creator-content{text-align:center;padding:30px;animation:creatorIn 1s ease both}
+.creator-small{font-size:1rem;letter-spacing:4px;text-transform:uppercase;opacity:.8}
+.creator-name{
+  margin:8px 0;font-size:clamp(3.2rem,14vw,7rem);font-weight:900;line-height:1;
+  background:linear-gradient(90deg,#fff,#ff91c8,#bba4ff,#fff);background-size:300%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:shine 3s linear infinite;
+}
+.creator-team{font-size:clamp(1rem,4vw,1.4rem);letter-spacing:3px;opacity:.9}
+.creator-line{width:90px;height:3px;border-radius:10px;margin:20px auto 0;background:linear-gradient(90deg,#ff4f9a,#8d5cff);animation:lineGrow 1.2s ease .5s both}
+@keyframes creatorIn{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
+@keyframes lineGrow{from{width:0;opacity:0}to{width:90px;opacity:1}}
+@keyframes splashOut{to{opacity:0;visibility:hidden;pointer-events:none}}
